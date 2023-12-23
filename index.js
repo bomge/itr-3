@@ -1,19 +1,19 @@
 const readline = require('readline-sync');
 
-const HMAC = require('./classes/HMAC')
 const ResultCalculatorClass = require('./classes/ResultCalculator')
 const TableClass = require('./classes/Table')
 const PlayerClass = require('./classes/Player')
 const ComputerClass = require('./classes/Computer')
 
+const HMAC = require('./classes/HMAC')
+const Validator = require('./classes/Validtor')
+
+
 const args = process.argv.slice(2);
 const choices = args;
 const numItems = choices.length;
 
-if (numItems < 3 || numItems % 2 === 0) {
-  console.log("Please provide at least 3 and odd choices");
-  process.exit(1);  
-}
+Validator.validateChoices(choices)
 
 const ResultCalculator = new ResultCalculatorClass(numItems)
 const Table = new TableClass(choices, ResultCalculator)
