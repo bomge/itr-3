@@ -45,13 +45,13 @@ while (true) {
 
   HMAC.check(choice, key, hmacHex)  
 
-
+/* 
   console.log(`\nCurrent Score:`);
   console.log(`Player: ${playerScore}`); 
-  console.log(`Computer: ${computerScore}\n`);
+  console.log(`Computer: ${computerScore}\n`); */
   
 
 
-  process.exit()
+  // process.exit()
 
 }
